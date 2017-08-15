@@ -25,3 +25,23 @@ var bio = {
         "HTML & CSS", "GitHub", "JavaScript", "WordPress", "Adobe Photoshop & Illustrator"
     ]
 }
+
+var education = {
+    "schools": [
+        {
+            "name": "Pace Universtiy",
+            "location": "1 Pace Plaza, New York City",
+            "degree": "BS",
+            "dates": "2001",
+            "majors": ["Computer Science"]
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "JavaScript Basics",
+            "school": "Udacity",
+            "dates": "August 2017",
+            "url": "https://www.udacity.com/"
+        }
+    ]
+}
