@@ -1,10 +1,3 @@
-var formattedName = HTMLheaderName.replace("%data%", name);
-var role = "Web Developer";
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
 var bio = {
     "name": "Shu (Susan) Chen",
     "role": "Web Developer",
@@ -19,8 +12,48 @@ var bio = {
     },
     "skills": [
         "HTML & CSS", "GitHub", "JavaScript", "WordPress", "Adobe Photoshop & Illustrator"
-    ]
+    ],
+    "display": function(){
+            var i;
+
+            if (bio.name){
+                $("#header").append(HTMLheaderName.replace("%data%", bio.name));
+            }
+            if (bio.role){
+                $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+            }
+            if (bio.welcomeMessage){
+                $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+            }
+            if (bio.biopic){
+                $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+            }
+            if (bio.contacts){
+                if (bio.contacts.mobile){
+                     $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+                }
+                if (bio.contacts.email){
+                    $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
+                }
+                if (bio.contacts.github){
+                    $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
+                }
+                if (bio.contacts.twitter){
+                    $("#header").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+                }
+                if (bio.contacts.location){
+                    $("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
+                }
+            }
+            if (bio.skills.length > 0) {
+                $("#header").append(HTMLskillsStart);
+                for (i = 0; i < bio.skills.length; i++){
+                    $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+                }
+            }
+        }
 }
+bio.display();
 
 var education = {
     "schools": [
