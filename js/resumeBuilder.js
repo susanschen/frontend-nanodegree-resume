@@ -54,7 +54,24 @@ var work = {
                 "title": "Customer Service Representative",
                 "location": "40 Wall St, New York City",
                 "dates": "Dec 2002 - Jun 2017",
-                "description": "Provide phone and email support for new and existing customers. Resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner. Evaluate documents for fraud and inaccurate statements by verifying against a national database. Liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their account"
+                "description": "I provide phone and email support for new and existing customers, resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner, evaluate documents for fraud and inaccurate statements by verifying against a national database, and liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their accounts."
             }
         ]
+}
+
+var projects = {
+    "projects": [
+        {
+            "title": "Project Title",
+            "dates": "project dates 2017 ",
+            "description": "Project description",
+            "images": ["images/197x148.gif", "images/197x148.gif"]
+        },
+        {
+            "title": "Project Title 2",
+            "dates": "project dates 2016 ",
+            "description": "Project description 2",
+            "images": ["images/197x148.gif", "images/197x148.gif"]
+        }
+    ]
 }
