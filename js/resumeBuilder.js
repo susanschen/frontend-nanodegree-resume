@@ -71,6 +71,26 @@ var projects = {
     ]
 }
 
+projects.display = function(){
+    var i, j, formattedTitle, formattedDates, formattedDesc, formattedImages;
+    if (projects.projects.length > 0){
+        $("#projects").append(HTMLprojectStart);
+    }
+    for (i = 0; i < projects.projects.length; i++){
+        formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+        formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+        formattedDesc = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+        $(".project-entry").append(formattedTitle + formattedDates + formattedDesc);
+        if (projects.projects[i].images.length > 0){
+            for (j = 0; j < projects.projects[i].images.length; j++){
+                formattedImages = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
+                $(".project-entry").append(formattedImages);
+            }
+        }
+    }
+}
+projects.display();
+
 function displayWork(){
     var i, formattedEmployer, formattedTitle, formattedDates, formattedDesc, formattedLoc;
     if (work.jobs.length > 0){
