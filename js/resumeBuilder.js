@@ -86,3 +86,12 @@ function displayWork(){
     }
 }
 displayWork();
+
+function locationizer(work_obj) {
+    var arrayLocations = [];
+    work_obj.jobs.forEach(function(job){
+    arrayLocations.push(job.location);
+    })
+ return arrayLocations;
+}
+console.log(locationizer(work));
