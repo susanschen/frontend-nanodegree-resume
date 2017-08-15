@@ -45,3 +45,16 @@ var education = {
         }
     ]
 }
+
+
+var work = {
+        "jobs": [
+            {
+                "employer": "Country-Wide Insurance",
+                "title": "Customer Service Representative",
+                "location": "40 Wall St, New York City",
+                "dates": "Dec 2002 - Jun 2017",
+                "description": "Provide phone and email support for new and existing customers. Resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner. Evaluate documents for fraud and inaccurate statements by verifying against a national database. Liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their account"
+            }
+        ]
+}
