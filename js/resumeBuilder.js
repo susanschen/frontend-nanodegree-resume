@@ -1,6 +1,3 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
 var formattedName = HTMLheaderName.replace("%data%", name);
 var role = "Web Developer";
 var formattedRole = HTMLheaderRole.replace("%data%", role);
@@ -8,7 +5,6 @@ var formattedRole = HTMLheaderRole.replace("%data%", role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
-// lesson 3.15
 var bio = {
     "name": "Shu (Susan) Chen",
     "role": "Web Developer",
@@ -45,7 +41,6 @@ var education = {
         }
     ]
 }
-
 
 var work = {
         "jobs": [
