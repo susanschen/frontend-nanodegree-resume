@@ -70,3 +70,19 @@ var projects = {
         }
     ]
 }
+
+function displayWork(){
+    var i, formattedEmployer, formattedTitle, formattedDates, formattedDesc, formattedLoc;
+    if (work.jobs.length > 0){
+        $("#workExperience").append(HTMLworkStart);
+    }
+    for (i = 0; i < work.jobs.length; i++){
+        formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+        formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
+        formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+        formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[i].description);
+        formattedLoc = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+        $(".work-entry").append(formattedEmployer + formattedTitle + formattedDates + formattedLoc + formattedDesc);
+    }
+}
+displayWork();
