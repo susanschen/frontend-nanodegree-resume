@@ -72,8 +72,35 @@ var education = {
             "dates": "August 2017",
             "url": "https://www.udacity.com/"
         }
-    ]
+    ],
+    "display": function(){
+        var i, j;
+        if (education.schools.length > 0) {
+            $("#education").append(HTMLschoolStart);
+            for (i = 0; i < education.schools.length; i++) {
+                $(".education-entry").append(HTMLschoolName.replace("%data%", education.schools[i].name));
+                $(".education-entry").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
+                $(".education-entry").append(HTMLschoolDegree.replace("%data%", education.schools[i].degree));
+                if (education.schools[i].majors){
+                     for (j = 0; j < education.schools[i].majors.length; j++){
+                         $(".education-entry").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]));
+                     }
+                }
+                $(".education-entry").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
+            }
+        }
+        if(education.onlineCourses.length > 0){
+            $("#education").append(HTMLonlineClasses);
+            for (i = 0; i < education.onlineCourses.length; i++){
+                $("#education").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title));
+                $("#education").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school));
+                $("#education").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
+                $("#education").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
+            }
+        }
+    }
 }
+education.display();
 
 var work = {
         "jobs": [
