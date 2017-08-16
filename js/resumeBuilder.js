@@ -103,16 +103,31 @@ var education = {
 education.display();
 
 var work = {
-        "jobs": [
-            {
-                "employer": "Country-Wide Insurance",
-                "title": "Customer Service Representative",
-                "location": "40 Wall St, New York City",
-                "dates": "Dec 2002 - Jun 2017",
-                "description": "I provide phone and email support for new and existing customers, resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner, evaluate documents for fraud and inaccurate statements by verifying against a national database, and liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their accounts."
-            }
-        ]
-}
+    "jobs": [
+        {
+            "employer": "Country-Wide Insurance",
+            "title": "Customer Service Representative",
+            "location": "40 Wall St, New York City",
+            "dates": "Dec 2002 - Jun 2017",
+            "description": "I provide phone and email support for new and existing customers, resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner, evaluate documents for fraud and inaccurate statements by verifying against a national database, and liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their accounts."
+        }
+    ],
+    "display": function(){
+        var i, formattedEmployer, formattedTitle, formattedDates, formattedDesc, formattedLoc;
+        if (work.jobs.length > 0){
+            $("#workExperience").append(HTMLworkStart);
+        }
+        for (i = 0; i < work.jobs.length; i++){
+            formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+            formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
+            formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+            formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[i].description);
+            formattedLoc = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+            $(".work-entry").append(formattedEmployer + formattedTitle + formattedDates + formattedLoc + formattedDesc);
+        }
+    }
+};
+work.display();
 
 var projects = {
     "projects": [
@@ -150,22 +165,6 @@ projects.display = function(){
     }
 }
 projects.display();
-
-function displayWork(){
-    var i, formattedEmployer, formattedTitle, formattedDates, formattedDesc, formattedLoc;
-    if (work.jobs.length > 0){
-        $("#workExperience").append(HTMLworkStart);
-    }
-    for (i = 0; i < work.jobs.length; i++){
-        formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
-        formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
-        formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
-        formattedDesc = HTMLworkDescription.replace("%data%", work.jobs[i].description);
-        formattedLoc = HTMLworkLocation.replace("%data%", work.jobs[i].location);
-        $(".work-entry").append(formattedEmployer + formattedTitle + formattedDates + formattedLoc + formattedDesc);
-    }
-}
-displayWork();
 
 function locationizer(work_obj) {
     var arrayLocations = [];
