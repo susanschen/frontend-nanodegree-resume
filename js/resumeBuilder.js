@@ -28,27 +28,25 @@ var bio = {
             if (bio.biopic) {
                 $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
             }
-            if (bio.contacts) {
-                if (bio.contacts.mobile) {
-                    $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-                    $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-                }
-                if (bio.contacts.email) {
-                    $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
-                    $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-                }
-                if (bio.contacts.github) {
-                    $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
-                    $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-                }
-                if (bio.contacts.twitter) {
-                    $("#header").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-                    $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-                }
-                if (bio.contacts.location) {
-                    $("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
-                    $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-                }
+            if (bio.contacts.mobile) {
+                $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+                $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+            }
+            if (bio.contacts.email) {
+                $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
+                $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+            }
+            if (bio.contacts.github) {
+                $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
+                $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+            }
+            if (bio.contacts.twitter) {
+                $("#header").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+                $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+            }
+            if (bio.contacts.location) {
+                $("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
+                $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
             }
             if (bio.skills.length > 0) {
                 $("#header").append(HTMLskillsStart);
