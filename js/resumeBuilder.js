@@ -14,43 +14,46 @@ var bio = {
     ],
     "biopic": "images/fry.jpg",
     "display": function() {
-            var i;
+            var i, formattedMobile, c, formattedGithub, formattedTwitter, formattedMsg, formattedPic, formattedLoc, formattedSkills;
             if (bio.role) {
                 $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
             }
             if (bio.name) {
                 $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
             }
-            if (bio.welcomeMessage) {
-                $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
-            }
-            if (bio.biopic) {
-                $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-            }
             if (bio.contacts.mobile) {
-                $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-                $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+                formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile)
+                $("#topContacts").append(formattedMobile);
+                $("#footerContacts").append(formattedMobile);
             }
             if (bio.contacts.email) {
-                $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-                $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+                formattedMobile = HTMLemail.replace("%data%", bio.contacts.email);
+                $("#topContacts").append(formattedMobile);
+                $("#footerContacts").append(formattedMobile);
             }
             if (bio.contacts.github) {
-                $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-                $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+                formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+                $("#topContacts").append(formattedGithub);
+                $("#footerContacts").append(formattedGithub);
             }
             if (bio.contacts.twitter) {
-                $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-                $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+                formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter)
+                $("#topContacts").append(formattedTwitter);
+                $("#footerContacts").append(formattedTwitter);
             }
             if (bio.contacts.location) {
-                $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-                $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+                formattedLoc = HTMLlocation.replace("%data%", bio.contacts.location);
+                $("#topContacts").append(formattedLoc);
+                $("#footerContacts").append(formattedLoc);
             }
+            formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+            formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+            $("#header").append(formattedMsg + formattedPic);
             if (bio.skills.length > 0) {
                 $("#header").append(HTMLskillsStart);
                 for (i = 0; i < bio.skills.length; i++) {
-                    $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+                    formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+                    $("#skills").append(formattedSkills);
                 }
             }
         }
