@@ -171,6 +171,9 @@ var projects = {
 };
 projects.display();
 
+/* to display google Map */
+$("#mapDiv").append(googleMap);
+
 function locationizer(work_obj) {
     var arrayLocations = [];
     work_obj.jobs.forEach(function(job) {
