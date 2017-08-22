@@ -96,10 +96,10 @@ var education = {
         if(education.onlineCourses.length > 0) {
             $("#education").append(HTMLonlineClasses);
             for (i = 0; i < education.onlineCourses.length; i++) {
-                $(".education-entry").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title));
-                $(".education-entry").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school));
-                $(".education-entry").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
-                $(".education-entry").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
+                $("#education").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title));
+                $("#education").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school));
+                $("#education").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
+                $("#education").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
             }
         }
     }
