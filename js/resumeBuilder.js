@@ -1,8 +1,6 @@
 var bio = {
     "name": "Shu (Susan) Chen",
     "role": "Web Developer",
-    "welcomeMessage": "Hello! Thank you for viewing my online resume.",
-    "biopic": "images/fry.jpg",
     "contacts": {
         "mobile": "",
         "email": "",
@@ -10,9 +8,11 @@ var bio = {
         "twitter": "",
         "location": "Elmhurst, New York"
     },
+    "welcomeMessage": "Hello! Thank you for viewing my online resume.",
     "skills": [
         "HTML & CSS", "GitHub", "JavaScript", "WordPress", "Adobe Photoshop & Illustrator"
     ],
+    "biopic": "images/fry.jpg",
     "display": function() {
             var i;
 
@@ -29,7 +29,7 @@ var bio = {
                 $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
             }
             if (bio.contacts) {
-                if (bio.contacts.mobile) {                                                                         $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+                if (bio.contacts.mobile) {                                                                       $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
                 }
                 if (bio.contacts.email) {
                     $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
@@ -60,8 +60,9 @@ var education = {
             "name": "Pace Universtiy",
             "location": "1 Pace Plaza, New York City",
             "degree": "BS",
+            "majors": ["Computer Science"],
             "dates": "2001",
-            "majors": ["Computer Science"]
+            "url": "https://www.pace.edu"
         }
     ],
     "onlineCourses": [
@@ -81,9 +82,9 @@ var education = {
                 $(".education-entry").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
                 $(".education-entry").append(HTMLschoolDegree.replace("%data%", education.schools[i].degree));
                 if (education.schools[i].majors) {
-                     for (j = 0; j < education.schools[i].majors.length; j++) {
-                         $(".education-entry").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]));
-                     }
+                    for (j = 0; j < education.schools[i].majors.length; j++) {
+                        $(".education-entry").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]));
+                    }
                 }
                 $(".education-entry").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
             }
