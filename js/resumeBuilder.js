@@ -15,12 +15,11 @@ var bio = {
     "biopic": "images/fry.jpg",
     "display": function() {
             var i;
-
-            if (bio.name) {
-                $("#header").append(HTMLheaderName.replace("%data%", bio.name));
-            }
             if (bio.role) {
-                $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+                $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+            }
+            if (bio.name) {
+                $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
             }
             if (bio.welcomeMessage) {
                 $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
@@ -29,23 +28,23 @@ var bio = {
                 $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
             }
             if (bio.contacts.mobile) {
-                $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+                $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
                 $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
             }
             if (bio.contacts.email) {
-                $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
+                $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
                 $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
             }
             if (bio.contacts.github) {
-                $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
+                $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
                 $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
             }
             if (bio.contacts.twitter) {
-                $("#header").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+                $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
                 $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
             }
             if (bio.contacts.location) {
-                $("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
+                $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
                 $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
             }
             if (bio.skills.length > 0) {
