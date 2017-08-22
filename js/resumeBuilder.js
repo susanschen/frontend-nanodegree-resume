@@ -14,71 +14,67 @@ var bio = {
     ],
     "biopic": "images/fry.jpg",
     "display": function() {
-            var i, formattedMobile, c, formattedGithub, formattedTwitter, formattedMsg, formattedPic, formattedLoc, formattedSkills;
-            if (bio.role) {
-                $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-            }
-            if (bio.name) {
-                $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-            }
-            if (bio.contacts.mobile) {
-                formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile)
-                $("#topContacts").append(formattedMobile);
-                $("#footerContacts").append(formattedMobile);
-            }
-            if (bio.contacts.email) {
-                formattedMobile = HTMLemail.replace("%data%", bio.contacts.email);
-                $("#topContacts").append(formattedMobile);
-                $("#footerContacts").append(formattedMobile);
-            }
-            if (bio.contacts.github) {
-                formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-                $("#topContacts").append(formattedGithub);
-                $("#footerContacts").append(formattedGithub);
-            }
-            if (bio.contacts.twitter) {
-                formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter)
-                $("#topContacts").append(formattedTwitter);
-                $("#footerContacts").append(formattedTwitter);
-            }
-            if (bio.contacts.location) {
-                formattedLoc = HTMLlocation.replace("%data%", bio.contacts.location);
-                $("#topContacts").append(formattedLoc);
-                $("#footerContacts").append(formattedLoc);
-            }
-            formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-            formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-            $("#header").append(formattedMsg + formattedPic);
-            if (bio.skills.length > 0) {
-                $("#header").append(HTMLskillsStart);
-                for (i = 0; i < bio.skills.length; i++) {
-                    formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
-                    $("#skills").append(formattedSkills);
-                }
+        var i, formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedMsg, formattedPic, formattedLoc, formattedSkills;
+        if (bio.role) {
+            $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+        }
+        if (bio.name) {
+            $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+        }
+        if (bio.contacts.mobile) {
+            formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+            $("#topContacts").append(formattedMobile);
+            $("#footerContacts").append(formattedMobile);
+        }
+        if (bio.contacts.email) {
+            formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+            $("#topContacts").append(formattedEmail);
+            $("#footerContacts").append(formattedEmail);
+        }
+        if (bio.contacts.github) {
+            formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+            $("#topContacts").append(formattedGithub);
+            $("#footerContacts").append(formattedGithub);
+        }
+        if (bio.contacts.twitter) {
+            formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+            $("#topContacts").append(formattedTwitter);
+            $("#footerContacts").append(formattedTwitter);
+        }
+        if (bio.contacts.location) {
+            formattedLoc = HTMLlocation.replace("%data%", bio.contacts.location);
+            $("#topContacts").append(formattedLoc);
+            $("#footerContacts").append(formattedLoc);
+        }
+        formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+        $("#header").append(formattedMsg + formattedPic);
+        if (bio.skills.length > 0) {
+            $("#header").append(HTMLskillsStart);
+            for (i = 0; i < bio.skills.length; i++) {
+                formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+                $("#skills").append(formattedSkills);
             }
         }
+    }
 };
 bio.display();
 
 var education = {
-    "schools": [
-        {
-            "name": "Pace Universtiy",
-            "location": "1 Pace Plaza, New York City",
-            "degree": "BS",
-            "majors": ["Computer Science"],
-            "dates": "2001",
-            "url": "https://www.pace.edu"
-        }
-    ],
-    "onlineCourses": [
-        {
-            "title": "JavaScript Basics",
-            "school": "Udacity",
-            "dates": "August 2017",
-            "url": "https://www.udacity.com/"
-        }
-    ],
+    "schools": [{
+        "name": "Pace Universtiy",
+        "location": "1 Pace Plaza, New York City",
+        "degree": "BS",
+        "majors": ["Computer Science"],
+        "dates": "2001",
+        "url": "https://www.pace.edu"
+    }],
+    "onlineCourses": [{
+        "title": "JavaScript Basics",
+        "school": "Udacity",
+        "dates": "August 2017",
+        "url": "https://www.udacity.com/"
+    }],
     "display": function() {
         var i, j, formattedName, formattedDegree, formattedDates, formattedMajors, formattedLoc, formattedOTitle, formattedOSchool, formattedODates, formattedOUrl;
 
@@ -99,7 +95,7 @@ var education = {
                 $(".education-entry").append(formattedLoc);
             }
         }
-        if(education.onlineCourses.length > 0) {
+        if (education.onlineCourses.length > 0) {
             $("#education").append(HTMLonlineClasses + HTMLschoolStart);
             for (i = 0; i < education.onlineCourses.length; i++) {
                 formattedOTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
@@ -114,16 +110,14 @@ var education = {
 education.display();
 
 var work = {
-    "jobs": [
-        {
-            "employer": "Country-Wide Insurance",
-            "title": "Customer Service Representative",
-            "location": "40 Wall St, New York City",
-            "dates": "Dec 2002 - Jun 2017",
-            "description": "I provide phone and email support for new and existing customers, resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner, evaluate documents for fraud and inaccurate statements by verifying against a national database, and liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their accounts."
-        }
-    ],
-    "display": function(){
+    "jobs": [{
+        "employer": "Country-Wide Insurance",
+        "title": "Customer Service Representative",
+        "location": "40 Wall St, New York City",
+        "dates": "Dec 2002 - Jun 2017",
+        "description": "I provide phone and email support for new and existing customers, resolve complaints about accounts directly over the phone with irate customers and brokers in a professional manner, evaluate documents for fraud and inaccurate statements by verifying against a national database, and liaise with the New York State Department of Motor Vehicle to assist current customers with suspensions in their accounts."
+    }],
+    "display": function() {
         var i, formattedEmployer, formattedTitle, formattedDates, formattedDesc, formattedLoc;
         if (work.jobs.length > 0) {
             $("#workExperience").append(HTMLworkStart);
@@ -141,8 +135,7 @@ var work = {
 work.display();
 
 var projects = {
-    "projects": [
-        {
+    "projects": [{
             "title": "Responsive Website Mockup",
             "dates": "August 2017",
             "description": "I created a responsive website to match a mockup design. Using CSS media queries, I altered the layout of the website based on whether it is viewed on a mobile, tablet, or desktop device. Using HTML picture element, I programmed the site to load a different banner image for different devices, which is especially helpful for reducing file size on mobile devices with low bandwidth.",
@@ -161,7 +154,7 @@ var projects = {
             "images": ["images/197x148.gif", "images/197x148.gif"]
         }
     ],
-    "display":function(){
+    "display": function() {
         var i, j, formattedTitle, formattedDates, formattedDesc, formattedImages;
         if (projects.projects.length > 0) {
             $("#projects").append(HTMLprojectStart);
@@ -190,6 +183,6 @@ function locationizer(work_obj) {
     work_obj.jobs.forEach(function(job) {
         arrayLocations.push(job.location);
     });
- return arrayLocations;
+    return arrayLocations;
 }
 console.log(locationizer(work));
