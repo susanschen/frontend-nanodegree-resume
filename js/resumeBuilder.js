@@ -2,8 +2,8 @@ var bio = {
     "name": "Shu (Susan) Chen",
     "role": "Web Developer",
     "contacts": {
-        "mobile": "",
-        "email": "",
+        "mobile": "(917)111-2222",
+        "email": "username@email.com",
         "github": "susanschen",
         "twitter": "",
         "location": "Elmhurst, New York"
