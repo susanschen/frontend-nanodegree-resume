@@ -143,15 +143,21 @@ work.display();
 var projects = {
     "projects": [
         {
-            "title": "Project Title",
-            "dates": "project dates 2017 ",
-            "description": "Project description",
+            "title": "Responsive Website Mockup",
+            "dates": "August 2017",
+            "description": "I created a responsive website to match a mockup design using HTML5 picture element and CSS media queries.",
             "images": ["images/197x148.gif", "images/197x148.gif"]
         },
         {
-            "title": "Project Title 2",
-            "dates": "project dates 2016 ",
-            "description": "Project description 2",
+            "title": "Javascript Online Resume",
+            "dates": "August 2017",
+            "description": "This online resume is created using javascript objects and features the use of Google Map API",
+            "images": ["images/197x148.gif", "images/197x148.gif"]
+        },
+        {
+            "title": "Javascript Arcade Game (Future)",
+            "dates": "August 2017",
+            "description": "A fun game built on javascript.",
             "images": ["images/197x148.gif", "images/197x148.gif"]
         }
     ],
