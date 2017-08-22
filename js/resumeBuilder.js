@@ -145,13 +145,13 @@ var projects = {
         {
             "title": "Responsive Website Mockup",
             "dates": "August 2017",
-            "description": "I created a responsive website to match a mockup design using HTML5 picture element and CSS media queries.",
+            "description": "I created a responsive website to match a mockup design. Using CSS media queries, I altered the layout of the website based on whether it is viewed on a mobile, tablet, or desktop device. Using HTML picture element, I programmed the site to load a different banner image for different devices, which is especially helpful for reducing file size on mobile devices with low bandwidth.",
             "images": ["images/197x148.gif", "images/197x148.gif"]
         },
         {
             "title": "Javascript Online Resume",
             "dates": "August 2017",
-            "description": "This online resume is created using javascript objects and features the use of Google Map API",
+            "description": "This online resume has four JavaScript objects, each one representing a different resume section: Bio, Work, Education, and Projects. The project also features the use of API with Google Maps pulling location data from the bio and work sections.",
             "images": ["images/197x148.gif", "images/197x148.gif"]
         },
         {
