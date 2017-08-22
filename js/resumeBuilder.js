@@ -29,7 +29,7 @@ var bio = {
                 $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
             }
             if (bio.contacts) {
-                if (bio.contacts.mobile) {                                                                       $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+                if (bio.contacts.mobile) {                                                               $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
                 }
                 if (bio.contacts.email) {
                     $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
@@ -51,7 +51,7 @@ var bio = {
                 }
             }
         }
-}
+};
 bio.display();
 
 var education = {
@@ -99,7 +99,7 @@ var education = {
             }
         }
     }
-}
+};
 education.display();
 
 var work = {
@@ -162,14 +162,14 @@ var projects = {
             }
         }
     }
-}
+};
 projects.display();
 
 function locationizer(work_obj) {
     var arrayLocations = [];
     work_obj.jobs.forEach(function(job) {
         arrayLocations.push(job.location);
-    })
+    });
  return arrayLocations;
 }
 console.log(locationizer(work));
