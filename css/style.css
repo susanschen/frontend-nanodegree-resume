@@ -131,6 +131,11 @@ a {
   background-color: #036;
 }
 
+#header, #workExperience, #projects, #education, #mapDiv, #lets-connect {
+    width: 80vw;
+    margin: auto;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
