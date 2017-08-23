@@ -135,7 +135,12 @@ a {
     background-color: #036;
 }
 
-#header, #workExperience, #projects, #education, #mapDiv, #lets-connect {
+#header,
+#workExperience,
+#projects,
+#education,
+#mapDiv,
+#lets-connect {
     width: 80vw;
     margin: auto;
 }
@@ -219,7 +224,12 @@ span {
 }
 
 @media only screen and (max-width: 450px) {
-    #header, #workExperience, #projects, #education, #mapDiv, #lets-connect {
+    #header,
+    #workExperience,
+    #projects,
+    #education,
+    #mapDiv,
+    #lets-connect {
         width: 90vw;
         margin: auto;
     }
