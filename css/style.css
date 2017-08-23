@@ -234,6 +234,22 @@ span {
         margin: auto;
     }
 
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .date-text,
+    .location-text,
+    p,
+    a {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
     #lets-connect {
         margin-top: 5rem;
     }
