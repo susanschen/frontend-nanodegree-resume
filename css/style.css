@@ -173,10 +173,6 @@ span {
     padding: 5px;
 }
 
-#lets-connect {
-    text-align: center;
-}
-
 #map {
     display: block;
     height: 100%;
@@ -188,13 +184,12 @@ span {
     padding-bottom: 5%;
 }
 
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-    #lets-connect {
-        margin-top: 5%;
-    }
+#lets-connect {
+    margin-top: 2rem;
+    text-align: center;
 }
+
+/* Media queries to handle various device widths */
 
 @media only screen and (max-width:900px) {
     .biopic {
@@ -203,16 +198,23 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-    #lets-connect {
-        margin-top: 10%;
-    }
-
     .biopic {
         width: 150px;
     }
 
     .welcome-message {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #header, #workExperience, #projects, #education, #mapDiv, #lets-connect {
+        width: 90vw;
+        margin: auto;
+    }
+
+    #lets-connect {
+        margin-top: 5rem;
     }
 }
 
