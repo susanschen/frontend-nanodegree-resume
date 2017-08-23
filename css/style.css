@@ -90,6 +90,10 @@ a {
     display: block;
 }
 
+span {
+    color: #f3f3f3;
+}
+
 .welcome-message {
     font-style: italic;
     font-size: 18px;
