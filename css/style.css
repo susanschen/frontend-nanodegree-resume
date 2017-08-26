@@ -64,7 +64,7 @@ h5 {
 .date-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #777;
     line-height: 16px;
     float: left;
 }
@@ -72,7 +72,7 @@ h5 {
 .location-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #777;
     line-height: 16px;
     float: right;
 }
@@ -122,7 +122,7 @@ a {
 }
 
 .gray {
-    background-color: #ddd;
+    background-color: #eee;
     padding-bottom: 10px;
     clear: both;
 }
