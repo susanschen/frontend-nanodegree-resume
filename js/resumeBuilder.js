@@ -12,7 +12,7 @@ var bio = {
     "skills": [
         "HTML & CSS", "GitHub", "JavaScript", "WordPress", "Adobe Photoshop & Illustrator"
     ],
-    "biopic": "images/fry.jpg",
+    "biopic": "images/self.jpg",
     "display": function() {
         var i, formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedMsg, formattedPic, formattedLoc, formattedSkills;
         if (bio.role) {
@@ -139,13 +139,13 @@ var projects = {
             "title": "Responsive Website Mockup",
             "dates": "August 2017",
             "description": "I created a responsive website to match a mockup design. Using CSS media queries, I altered the layout of the website based on whether it is viewed on a mobile, tablet, or desktop device. Using HTML picture element, I programmed the site to load a different banner image for different devices, which is especially helpful for reducing file size on mobile devices with low bandwidth.",
-            "images": ["images/197x148.gif", "images/197x148.gif"]
+            "images": ["images/mockup.png", "images/responsive197x148.jpg"]
         },
         {
             "title": "Javascript Online Resume",
             "dates": "August 2017",
             "description": "This online resume has four JavaScript objects, each one representing a different resume section: Bio, Work, Education, and Projects. The project also features the use of API with Google Maps pulling location data from the bio and work sections.",
-            "images": ["images/197x148.gif", "images/197x148.gif"]
+            "images": ["images/resume01.jpg", "images/resume02.jpg"]
         },
         {
             "title": "Javascript Arcade Game (Future)",
