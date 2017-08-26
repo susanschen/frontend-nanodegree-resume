@@ -4,11 +4,13 @@
 
 This is a project for the Udacity's Front-end Nanodegree course. It is forked from [Udacity Github](https://github.com/udacity/frontend-nanodegree-resume).
 
-### Mockup:
-The final resume will look something like this, which will serve as a guide for the order in which elements are added to the page. The CSS may be customized to show artistic creativity.
-![](http://i.imgur.com/pWU1Xbl.png)
+The final [online resume](https://susanschen.github.io/frontend-nanodegree-resume/) will be similiar to the mockup image below. The CSS has been customized to show my artistic creativity.
 
-### The process:
+### The Mockup:
+
+![Resume Mockup](http://i.imgur.com/pWU1Xbl.png "resume mockup")
+
+### The Javascript Objects:
 The resume has four JavaScript objects, each one representing a different resume section: work, education, projects and a header with biographical information.
 
   * `bio` contains:
@@ -61,5 +63,3 @@ The resume has four JavaScript objects, each one representing a different resume
                   images: array with string urls
             display: function taking no parameters
 
-### The resume includes an interactive map.
-It’s possible to make additional information show up when you click on the pins in the map.
