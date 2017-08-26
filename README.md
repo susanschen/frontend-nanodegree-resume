@@ -1,10 +1,16 @@
-# Front-End Nanodegree Resume
+# Resume
 
 ## Project Details
 
-This is a project for the Udacity's Front-end Nanodegree course. It is forked from [Udacity Github](https://github.com/udacity/frontend-nanodegree-resume).
+This is an online resume created for a project forked from [Udacity](https://github.com/udacity/frontend-nanodegree-resume). The original files from the forked repository has an empty resumebuilder.js file, which requires a student to write the code to complete the project.
 
-The final [online resume](https://susanschen.github.io/frontend-nanodegree-resume/) will be similiar to the mockup image below. The CSS has been customized to show my artistic creativity.
+### Lessons Learned from the Project
+
+I learned how to write in JSON, JavaScript Object Notation, by following the strict guideline set by Udacity. See the detailed objects below under "The Javascript Objects". I also learned how to use JQuery to select and add DOM elements to the HTML, and I got a taste of using Google Maps.
+
+## The Online Resume
+
+You may view my final [online resume here](https://susanschen.github.io/resume/).
 
 ### The Mockup:
 
